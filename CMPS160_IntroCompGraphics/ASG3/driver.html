@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+      <meta charset="utf-8"/>
+      <title> Jeremy Green's Assignment 3 </title>
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/cuon-utils.js"></script>
+      <script src = "lib/cuon-matrix.js"></script>
+      <script src = "lib/load-file.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+
+      <!-- Include tick function -->
+      <script src = "prog/tick.js"></script>
+
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+
+      <!-- Include scene objects -->
+      <script src = "prog/scene/scene.js"></script>
+      <script src = "prog/scene/vertex.js"></script>
+      <script src = "prog/scene/geometry.js"></script>
+
+      <!-- OBJ Loading -->
+      <script src = "lib/obj_loading/webgl-obj-loader.js"></script>
+      <script src = "lib/obj_loading/loadedOBJ.js"></script>
+
+      <!-- Include geometric objects -->
+      <script src = "prog/geometries/circle.js"></script>
+      <script src = "prog/geometries/square.js"></script>
+      <script src = "prog/geometries/triangle.js"></script>
+
+      <!-- Include animated geometric objects -->
+      <script src = "prog/geometries/animated/randomCircle.js"></script>
+      <script src = "prog/geometries/animated/spinningSquare.js"></script>
+      <script src = "prog/geometries/animated/fluctuatingTriangle.js"></script>
+      <script src = "prog/geometries/animated/tiltedCube.js"></script>
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+  </head>
+
+  <body onload = "main()">
+    <p> Assignment 3 </p>
+
+    <!-- YOUR CODE HERE -->
+    <canvas id="webgl" width="500" height="500"> 
+      10 Please use the browser supporting "canvas" s>11 
+    </canvas>
+
+    <p id="mlToRenderText">
+      This scene rendered yes
+    </p>
+
+    <p id="xyposText">
+      x: 0.0 y: 0.0
+    </p>
+
+    <p>
+      <button id="clbt">
+        Clear Canvas
+      </button>
+      Set OBJ:
+      <input type="file"
+               id="Obj_file"
+               accept=".obj" />
+      <button id="add_obj_bt">
+        Add OBJ To Scene
+      </button>
+    </p>
+
+    Drawing Mode:
+
+    <p>
+      <button id="Square_bt">
+        Spinning Squares
+      </button>
+      <button id="Tri_bt">
+        Fluctuating Triangles
+      </button>
+      <button id="Circle_bt">
+        Randomly moving Circles
+      </button>
+      <button id="Cube_bt">
+        Tilted Cube
+      </button>
+    </p>
+
+    Point Colors:
+
+    <div>
+      Red
+      <input id="sl_red" type="range" min="0" max="100" value="100">
+      Green
+      <input id="sl_green" type="range" min="0" max="100" value="0">
+      Blue
+      <input id="sl_blue" type="range" min="0" max="100" value="0">
+    </div>
+
+    <p>
+      Shape Size:
+      <input id="sl_sz" type="range" min="1" max="100" value="10">
+      Circles Segment Count:
+      <input id="circle_detail" type="range" min="3" max="90" value="10">
+    </p>
+  </body>
+</html>

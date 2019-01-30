@@ -1,0 +1,3 @@
+use 
+#include <vld.h> 
+in visual studio to detect memory leaks
